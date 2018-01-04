@@ -5,7 +5,7 @@ import tensorflow as tf
 from tensorflow.python.framework import ops
 import os
 
-os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'   #to supress warnings
 
 
 tf.set_random_seed(20)                  
