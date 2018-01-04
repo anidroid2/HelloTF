@@ -2,7 +2,10 @@
 
 ##Installing Tensorflow
 Depending on your platform, you need to install tensorflow library. The below link should help.
+```
 https://www.tensorflow.org/install/
+```
+
 For this basic code, you do not need GPU support. It will easily run on a CPU. 
 
 Also you need Python3.x
@@ -11,7 +14,8 @@ Also you need Python3.x
 python3 1_gate_learn.py
 
 ##OUTPUT:
-###Code Output:  
+###Code Output: 
+``` 
 number of training examples = 4 
 X_train shape: (2, 4) 
 Y_train shape: (1, 4) 
@@ -26,21 +30,25 @@ Y_train shape: (1, 4)
 80 0.159034 1.0 [[ 0.03196755  0.07987423  0.03033573  0.60754716]] 
 90 0.139308 1.0 [[ 0.02612194  0.07000994  0.02878116  0.65850174]] 
 100 0.123399 1.0 [[ 0.02204676  0.06331776  0.02755842  0.69188172]]
-
+```
 ###Explained Op: 
 After every 10 iterations, it will provide you the epoch #, log loss, accuracy, and output at the last layer.
 It is trained only on 4 data points. 
 I have used logic gates inputs and output. 
 
 ###Suggested modifications
-
+```
 Ln20: Y_train = np.matrix('0 ;0 ;0 ;1')    #try changing the gate type
+```
 You can change the values here. The above example resembles AND gate. You can try other ones.
 
-
+```
 Ln42: h = 4   
+```
 This variable specifies the number of hidden layer nodes. Try changing it and see the effect.
 
+```
 Ln77: optimizer = tf.train.GradientDescentOptimizer(learning_rate = 0.3).minimize(cost)  
+```
 Try changing the learning rate here. Try changing it and see the effect.
 
